@@ -11,4 +11,8 @@
 
 #wordbox {
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    min-width: 85%;
+    justify-content: center;
 }

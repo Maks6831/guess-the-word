@@ -1,7 +1,7 @@
 const words = ['python', 'javascript', 'object', 'array', 'methods', 'hypertextmarkuplanguage'];
 localStorage.setItem('words', JSON.stringify(words));
 let button = document.getElementsByClassName("button");
-let wordbox = document.getElementById("wordbox")
+let wordBox = document.getElementById("wordbox")
 
 function getRandomWord(arr) {
     let randomindex = Math.floor(Math.random() * arr.length);
@@ -14,9 +14,17 @@ console.log(getRandomWord(words))
 
 button[0].addEventListener('click', function() {
     let chosenWord = getRandomWord(words);
-    console.log(getRandomWord(words));
-    wordbox.textContent = chosenWord;
-    for 
-    
+    console.log(chosenWord);
+    let underScore = '';
+    for (let i = 0; i < chosenWord.length; i++) {
+        underScore += '<p>  _ , </p>';
 
+    }
+    wordBox.innerHTML = underScore;
+
+    document.addEventListener('keydown', (event)=> {
+        let name = event.key;
+        console.log(name);
+    });
 })
+
